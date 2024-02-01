@@ -23,7 +23,7 @@ impl Stack{
         if self.stack.len() < 1{
             panic!("stack underflow")
         }
-        self.stack.pop().unwrap()
+        self.stack.pop().unwrap_or(Bytes32::new())
     }
 
 }
